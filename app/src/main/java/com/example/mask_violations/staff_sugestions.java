@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,7 +18,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -25,33 +25,32 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class fo_view extends AppCompatActivity {
-    ImageView imfo;
-TextView nmfo;
-TextView hnfo;
-TextView plfo;
-TextView cnfo;
-TextView emfo;
-TextView pifo;
+public class staff_sugestions extends AppCompatActivity {
 
+    ImageView imgstf;
+    TextView nmstf;
+    TextView destf;
+    TextView dtstf;
+    ListView lv;
+    String[]name;
+    String[]description;
+    String[]date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fo_view);
-        imfo=(ImageView) findViewById(R.id.imageView8);
-        nmfo=(TextView) findViewById(R.id.textView49);
-        hnfo=(TextView) findViewById(R.id.textView50);
-        plfo=(TextView) findViewById(R.id.textView51);
-        cnfo=(TextView) findViewById(R.id.textView52);
-        emfo=(TextView) findViewById(R.id.textView53);
-        pifo=(TextView) findViewById(R.id.textView54);
+        setContentView(R.layout.activity_staff_suggessions);
+        lv=(ListView) findViewById(R.id.ls);
+        imgstf=(ImageView) findViewById(R.id.imageView7);
+        nmstf=(TextView) findViewById(R.id.textView9);
+        destf=(TextView) findViewById(R.id.textView12);
+        dtstf=(TextView) findViewById(R.id.textView29);
 
         SharedPreferences sh= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         final String maclis=sh.getString("mac_list","");
-        String uid=sh.getString("lid","");
+        String uid=sh.getString("uid","");
         String hu = sh.getString("ip", "");
-        String url = "http://" + hu + ":5000/and_viewstf_post";
+        String url = "http://" + hu + ":5000/and_staff_sugs_post";
 
 
 
@@ -67,28 +66,27 @@ TextView pifo;
                             JSONObject jsonObj = new JSONObject(response);
                             if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
 
-                                String name= jsonObj.getString("name");
-                                String housename=jsonObj.getString("housename");
-                                String place=jsonObj.getString("place");
-                                String contact=jsonObj.getString("contact");
-                                String email=jsonObj.getString("email");
-                                String pin=jsonObj.getString("pin");
-                                String img=jsonObj.getString("image");
-                                nmfo.setText(name);
-                                hnfo.setText(housename);
-                                plfo.setText(place);
-                                cnfo.setText(contact);
-                                emfo.setText(email);
-                                pifo.setText(pin);
-                                SharedPreferences sh= PreferenceManager.getDefaultSharedPreferences(getApplicationContext().getApplicationContext());
-                                String ip=sh.getString("ip","");
+                                JSONArray js= jsonObj.getJSONArray("users");
 
-                                String url="http://" + ip + ":5000/"+img;
+                                name=new String[js.length()];
+                                description=new String[js.length()];
+                                date=new String[js.length()];
 
 
-                                Picasso.with(getApplicationContext()).load(url). into(imfo);
+                                for(int i=0;i<js.length();i++)
+                                {
+                                    JSONObject u=js.getJSONObject(i);
+
+                                    name[i]=u.getString("ssg_lid");
+                                    description[i]=u.getString("ssg_des");
+                                    date[i]=u.getString("ssg_des");
 
 
+
+                                }
+                                lv.setAdapter(new custom_staff_sgstn(getApplicationContext(),name,description,date));
+//                                gv.setAdapter(new Custom_view_visited_game(getApplicationContext(),name,gamecode));
+                                // l1.setAdapter(new Custom(getApplicationContext(),gamecode,name,type,discription,image,status));
                             }
 
 
@@ -115,8 +113,8 @@ TextView pifo;
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params = new HashMap<String, String>();
 
-                String id=sh.getString("lid","");
-                params.put("lid",id);
+                String id=sh.getString("uid","");
+                params.put("uid",id);
 //                params.put("mac",maclis);
 
                 return params;

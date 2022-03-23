@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_mask_violation_alert"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Mask Violation Alerts" />
+        <item
+            android:id="@+id/nav_visitor"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Visitors_Profiles" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Notifications" />
+        <item
+            android:id="@+id/nav_staff_suggestions"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Staff Suggestions" />
+        <item
+            android:id="@+id/nav_add_familiar_persons"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Add familiar persons" />
+        <item
+            android:id="@+id/nav_view_familiar"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View familiar persons" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -3,10 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_fo_view.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_addfamiliar_person.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_alert_view.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_custom_mv_alert.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_fo_view.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_home.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_login.xml" value="0.15806159420289856" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_main.xml" value="0.15806159420289856" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_mv_alert.xml" value="0.33" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_set_ip.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_staff_suggessions.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_view_familiar_person.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_view_nots.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/activity_vis_log.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/app_bar_home.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/content_home.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/custom_fo_view.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/custom_fo_view_fam_person.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/custom_mv_alert.xml" value="0.21" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/custom_staff_suggestions.xml" value="0.33" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/custom_view_nots.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/custom_view_visitor_log.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/fragment_gallery.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/fragment_home.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/layout/nav_header_home.xml" value="0.13645833333333332" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Mask_violations/app/src/main/res/menu/activity_main_drawer.xml" value="0.17916666666666667" />
       </map>
     </option>
   </component>
